@@ -1,0 +1,101 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+* {
+  box-sizing: border-box;
+}
+main {
+  font-weight: 600;
+  font-size: 0.9em;
+}
+
+$color-gi-base: #e8d097;
+$color-gi-green: #81c468;
+main#genshinimpact {
+  table {
+    background-color: $color-gi-base;
+
+    th {
+      background-color: darken($color-gi-base, 10%);
+    }
+    td {
+      border-bottom: 1px solid darken($color-gi-base, 10%);
+    }
+    th.pulls, th.planned {
+      background-color: darken($color-gi-green, 10%);
+    }
+    td.pulls, td.planned {
+      background-color: $color-gi-green;
+      border-bottom: 1px solid darken($color-gi-green, 10%);
+      border-left: 1px solid darken($color-gi-green, 10%);
+    }
+  }
+}
+
+$color-hsr: #d597e8;
+main#honkaistarrail {
+  table {
+    background-color: $color-hsr;
+
+    th {
+      background-color: darken($color-hsr, 10%);
+    }
+    td {
+      border-bottom: 1px solid darken($color-hsr, 10%);
+    }
+  }
+}
+.bold {
+  font-weight: 700;
+}
+.editable {
+  cursor: pointer;
+}
+table {
+  text-align: left;
+  border-spacing: 0;
+
+  th {
+    border-bottom: 2px solid #000;
+  }
+  th, td {
+    padding: 0px 15px;
+    color: #050505;
+    height: 35px;
+    overflow: visible;
+    white-space: nowrap;
+    min-width: 50px;
+    text-align: center;
+  }
+}
+
+div#resources {
+  display: flex;
+  margin-bottom: 20px;
+
+  table#current-inventory, table#resource-generation {
+    width: 250px;
+
+    th, td {
+      text-align: left;
+    }
+    td.sum-total {
+      border-top: 2px solid #000;
+    }
+  }
+
+  table#resource-generation {
+    margin-left: 20px;
+  }
+}
